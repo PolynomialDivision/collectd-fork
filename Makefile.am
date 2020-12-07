@@ -1196,6 +1196,14 @@ interface_la_LIBADD += -lperfstat
 endif
 endif # BUILD_PLUGIN_INTERFACE
 
+if BUILD_PLUGIN_SNMP6
+pkglib_LTLIBRARIES += snmp6.la
+snmp6_la_SOURCES = src/snmp6.c
+snmp6_la_CFLAGS = $(AM_CFLAGS)
+snmp6_la_LDFLAGS = $(PLUGIN_LDFLAGS)
+snmp6_la_LIBADD = libignorelist.la
+endif # BUILD_PLUGIN_SNMP6
+
 if BUILD_PLUGIN_IPC
 pkglib_LTLIBRARIES += ipc.la
 ipc_la_SOURCES = src/ipc.c
