@@ -6618,6 +6618,7 @@ plugin_infiniband="no"
 plugin_intel_pmu="no"
 plugin_intel_rdt="no"
 plugin_interface="no"
+plugin_snmp6="no"
 plugin_ipc="no"
 plugin_ipmi="no"
 plugin_ipstats="no"
@@ -6682,6 +6683,7 @@ if test "x$ac_system" = "xLinux"; then
   plugin_hugepages="yes"
   plugin_infiniband="yes"
   plugin_interface="yes"
+  plugin_snmp6="yes"
   plugin_ipc="yes"
   plugin_irq="yes"
   plugin_load="yes"
@@ -6776,6 +6778,7 @@ if test "x$with_perfstat" = "xyes"; then
   plugin_cpu="yes"
   plugin_disk="yes"
   plugin_interface="yes"
+  plugin_snmp6="yes"
   plugin_load="yes"
   plugin_memory="yes"
   plugin_swap="yes"
@@ -6799,6 +6802,7 @@ if test "x$with_devinfo" = "xyes" && test "x$with_kstat" = "xyes"; then
   plugin_cpu="yes"
   plugin_disk="yes"
   plugin_interface="yes"
+  plugin_snmp6="yes"
   plugin_memory="yes"
   plugin_tape="yes"
 fi
@@ -6813,6 +6817,7 @@ if test "x$with_libstatgrab" = "xyes"; then
   plugin_cpu="yes"
   plugin_disk="yes"
   plugin_interface="yes"
+  plugin_snmp6="yes"
   plugin_load="yes"
   plugin_memory="yes"
   plugin_swap="yes"
@@ -6918,6 +6923,7 @@ fi
 
 if test "x$have_getifaddrs" = "xyes"; then
   plugin_interface="yes"
+  plugin_snmp6="yes"
 fi
 
 if test "x$have_getloadavg" = "xyes"; then
@@ -7084,6 +7090,7 @@ AC_PLUGIN([infiniband],          [$plugin_infiniband],        [Infiniband statis
 AC_PLUGIN([intel_pmu],           [$with_libjevents],          [Intel performance monitor plugin])
 AC_PLUGIN([intel_rdt],           [$with_libpqos],             [Intel RDT monitor plugin])
 AC_PLUGIN([interface],           [$plugin_interface],         [Interface traffic statistics])
+AC_PLUGIN([snmp6],               [$plugin_snmp6],             [IPv6 Interface traffic statistics via snmp6])
 AC_PLUGIN([ipc],                 [$plugin_ipc],               [IPC statistics])
 AC_PLUGIN([ipmi],                [$plugin_ipmi],              [IPMI sensor statistics])
 AC_PLUGIN([iptables],            [$with_libiptc],             [IPTables rule counters])
@@ -7531,6 +7538,7 @@ AC_MSG_RESULT([    infiniband  . . . . . $enable_infiniband])
 AC_MSG_RESULT([    intel_pmu . . . . . . $enable_intel_pmu])
 AC_MSG_RESULT([    intel_rdt . . . . . . $enable_intel_rdt])
 AC_MSG_RESULT([    interface . . . . . . $enable_interface])
+AC_MSG_RESULT([    snmp6 . . . . . . . . $enable_snmp6])
 AC_MSG_RESULT([    ipc . . . . . . . . . $enable_ipc])
 AC_MSG_RESULT([    ipmi  . . . . . . . . $enable_ipmi])
 AC_MSG_RESULT([    iptables  . . . . . . $enable_iptables])
