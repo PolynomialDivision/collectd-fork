@@ -119,6 +119,7 @@
 #@BUILD_PLUGIN_DBI_TRUE@LoadPlugin dbi
 #@BUILD_PLUGIN_DCPMM_TRUE@LoadPlugin dcpmm
 #@BUILD_PLUGIN_DF_TRUE@LoadPlugin df
+#@BUILD_PLUGIN_DHCPLEASES_TRUE@LoadPlugin dhcpleases
 #@BUILD_PLUGIN_DISK_TRUE@LoadPlugin disk
 #@BUILD_PLUGIN_DNS_TRUE@LoadPlugin dns
 #@BUILD_PLUGIN_DPDKEVENTS_TRUE@LoadPlugin dpdkevents
@@ -687,6 +688,10 @@
 #	Interface "eth0"
 #	IgnoreSource "192.168.0.1"
 #	SelectNumericQueryTypes true
+#</Plugin>
+
+#<Plugin dhcpleases>
+#	Path "/tmp/dhcp.leases"
 #</Plugin>
 
 #<Plugin "dpdkevents">

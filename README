@@ -106,6 +106,9 @@ Features
       Disk utilization: Sectors read/written, number of read/write actions,
       average time an IO-operation took to complete.
 
+    - dhcpleases
+      Collect number of current dhcp leases.
+
     - dns
       DNS traffic: Query types, response codes, opcodes and traffic/octets
       transferred.

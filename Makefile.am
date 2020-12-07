@@ -963,6 +963,12 @@ df_la_LDFLAGS = $(PLUGIN_LDFLAGS)
 df_la_LIBADD = libignorelist.la libmount.la
 endif
 
+if BUILD_PLUGIN_DHCPLEASES
+pkglib_LTLIBRARIES += dhcpleases.la
+dhcpleases_la_SOURCES = src/dhcpleases.c
+dhcpleases_la_LDFLAGS = $(PLUGIN_LDFLAGS)
+endif
+
 if BUILD_PLUGIN_DISK
 pkglib_LTLIBRARIES += disk.la
 disk_la_SOURCES = src/disk.c
