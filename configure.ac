@@ -6618,6 +6618,7 @@ plugin_infiniband="no"
 plugin_intel_pmu="no"
 plugin_intel_rdt="no"
 plugin_interface="no"
+plugin_snmpv6="no"
 plugin_ipc="no"
 plugin_ipmi="no"
 plugin_ipstats="no"
@@ -6682,6 +6683,7 @@ if test "x$ac_system" = "xLinux"; then
   plugin_hugepages="yes"
   plugin_infiniband="yes"
   plugin_interface="yes"
+  plugin_snmpv6="yes"
   plugin_ipc="yes"
   plugin_irq="yes"
   plugin_load="yes"
@@ -7084,6 +7086,7 @@ AC_PLUGIN([infiniband],          [$plugin_infiniband],        [Infiniband statis
 AC_PLUGIN([intel_pmu],           [$with_libjevents],          [Intel performance monitor plugin])
 AC_PLUGIN([intel_rdt],           [$with_libpqos],             [Intel RDT monitor plugin])
 AC_PLUGIN([interface],           [$plugin_interface],         [Interface traffic statistics])
+AC_PLUGIN([snmpv6],              [$plugin_snmpv6],            [IPv6 Interface traffic statistics via snmpv6])
 AC_PLUGIN([ipc],                 [$plugin_ipc],               [IPC statistics])
 AC_PLUGIN([ipmi],                [$plugin_ipmi],              [IPMI sensor statistics])
 AC_PLUGIN([iptables],            [$with_libiptc],             [IPTables rule counters])
